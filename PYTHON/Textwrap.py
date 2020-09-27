@@ -8,17 +8,18 @@
 # ABCD
 # EFGH
 # IJKL
-# IMNO
+# MNOP
 # QRST
 # UVWX
 # YZ
 
-import textwrap
-
-def wrap(string, max_width):
-    return textwrap.fill(string, max_width)
+def textwrap(string, max_width):
+    for length in range(0, len(string)-1, 4):
+        print(string[length:length+4])
+ 
 
 if __name__ == '__main__':
-    string, max_width = raw_input(), int(raw_input())
-    result = wrap(string, max_width)
-    print result
+    str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    wr = 4
+
+    textwrap(str, wr)

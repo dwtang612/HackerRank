@@ -4,11 +4,11 @@
 # the "true" length of the string.
 
 # Solution 1
-def URLifyEasy(str):
+def URLify(str):
     return str.strip().replace(" ", "%20")
 
 if __name__ == '__main__':
     s1 = "Mr John Smith        "
     output = "Mr%20John%20Smith"
 
-    print(URLifyEasy(s1))
+    print(URLify(s1))
